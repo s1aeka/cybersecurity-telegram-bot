@@ -124,7 +124,7 @@ async def generate_ai_report(target: str, mode: str, raw_data: str) -> str:
 
     async with _get_client() as client:
         response = await client.chat.completions.create(
-            model="google/gemma-4-31b-it:free",  # Быстрая и стабильная бесплатная модель
+            model="openrouter/free",  # Быстрая и стабильная бесплатная модель
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPTS[mode]},
                 {
